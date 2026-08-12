@@ -226,3 +226,14 @@ body, html {
 .cover-wrapper.open {
     pointer-events: none; 
 }
+
+/* Imagem de fundo das telas laterais (Esquerda e Direita) */
+.bg-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Mantém a proporção sem cortar a imagem */
+    z-index: 0;
+}
