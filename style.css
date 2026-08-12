@@ -221,3 +221,33 @@ body, html {
     object-fit: contain; /* Mantém a proporção sem cortar a imagem */
     z-index: 0;
 }
+
+/* --- INDICADORES DE DESLIZE (SETAS) --- */
+.swipe-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    background-color: rgba(26, 54, 41, 0.6); /* Verde escuro translúcido */
+    color: #fcfaf7; /* Cor do fundo do site */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    z-index: 10;
+    cursor: pointer;
+    animation: pulse-arrow 2s infinite; /* Chama a animação */
+}
+
+/* Posição de cada seta */
+.left-arrow { left: 10px; }
+.right-arrow { right: 10px; }
+
+/* Animação suave de pulsar */
+@keyframes pulse-arrow {
+    0% { transform: translateY(-50%) scale(1); opacity: 0.6; }
+    50% { transform: translateY(-50%) scale(1.1); opacity: 1; }
+    100% { transform: translateY(-50%) scale(1); opacity: 0.6; }
+}
