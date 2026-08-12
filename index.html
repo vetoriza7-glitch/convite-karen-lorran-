@@ -21,6 +21,10 @@
             <!-- PÁGINA CENTRAL (Slide 2 - O Convite Principal) -->
             <div class="slide slide-center" id="mainSlide">
                 <img src="convite_aberto.png" alt="Convite Aberto" class="bg-open">
+
+                <!-- INDICADORES DE DESLIZE (Setas) -->
+    <div class="swipe-arrow left-arrow" onclick="document.getElementById('sliderContainer').scrollBy({left: -window.innerWidth, behavior: 'smooth'})">&#10094;</div>
+    <div class="swipe-arrow right-arrow" onclick="document.getElementById('sliderContainer').scrollBy({left: window.innerWidth, behavior: 'smooth'})">&#10095;</div>
                 
                 <!-- Botões Interativos (Agora organizados DENTRO da página central!) -->
                 <div class="buttons-container">
