@@ -47,14 +47,15 @@ body, html {
 
 /* --- CONFIGURAÇÃO DE CADA PÁGINA (SLIDE) --- */
 .slide {
-    min-width: 100vw; /* Cada página ocupa 100% da largura da tela */
+    min-width: 100vw;
     height: 100vh;
-    scroll-snap-align: center; /* Encaixa sempre no centro da tela */
-    position: relative;
+    scroll-snap-align: center;
+    position: relative; /* ESSA LINHA É OBRIGATÓRIA */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
     
     /* Cor de fundo provisória só para você ver a diferença */
     background-color: #fcfaf7; 
