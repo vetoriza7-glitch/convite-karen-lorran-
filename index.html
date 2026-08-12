@@ -9,73 +9,61 @@
 <body>
 
     <div class="container">
-        <!-- CONVITE ABERTO (Agora em 3 Páginas/Slides) -->
-<div class="slider-container" id="sliderContainer">
-    
-    <!-- PÁGINA DA ESQUERDA (Slide 1) -->
-<div class="slide slide-left">
-    <!-- Adicione a imagem da tela esquerda aqui -->
-    <img src="tela_esquerda.png" alt="Tela Esquerda" class="bg-slide">
-</div>
-
-<!-- PÁGINA CENTRAL (Slide 2 - O Convite Principal) -->
-<div class="slide slide-center" id="mainSlide">
-    <img src="convite_aberto.png" alt="Convite Aberto" class="bg-open">
-    <!-- OS BOTÕES PRECISAM FICAR AQUI DENTRO, ANTES DE FECHAR A DIV ACIMA -->
-
-    </div>
-</div><!-- Fim da Página Central -->
-
-<!-- PÁGINA DA DIREITA (Slide 3) -->
-<div class="slide slide-right">
-    <!-- Adicione a imagem da tela direita aqui -->
-    <img src="tela_direita.png" alt="Tela Direita" class="bg-slide">
-</div>
         
-        <!-- Botões Interativos (Exatamente como estavam) -->
-        <div class="buttons-container">
-            <a href="SEU_LINK_AQUI" target="_blank" class="btn-link">
-                <div class="btn-icon-wrapper">
-                    <img src="botao-local.png" alt="Local">
-                </div>
-                <span class="btn-text">LOCAL DA<br>CERIMÔNIA</span>
-            </a>
+        <!-- CONVITE ABERTO (Agora em 3 Páginas/Slides) -->
+        <div class="slider-container" id="sliderContainer">
             
-            <a href="SEU_LINK_AQUI" target="_blank" class="btn-link">
-                <div class="btn-icon-wrapper">
-                    <img src="botao-lista.png" alt="Lista">
+            <!-- PÁGINA DA ESQUERDA (Slide 1) -->
+            <div class="slide slide-left">
+                <img src="tela_esquerda.png" alt="Tela Esquerda" class="bg-slide">
+            </div>
+
+            <!-- PÁGINA CENTRAL (Slide 2 - O Convite Principal) -->
+            <div class="slide slide-center" id="mainSlide">
+                <img src="convite_aberto.png" alt="Convite Aberto" class="bg-open">
+                
+                <!-- Botões Interativos (Agora organizados DENTRO da página central!) -->
+                <div class="buttons-container">
+                    <a href="SEU_LINK_AQUI" target="_blank" class="btn-link">
+                        <div class="btn-icon-wrapper">
+                            <img src="botao-local.png" alt="Local">
+                        </div>
+                        <span class="btn-text">LOCAL DA<br>CERIMÔNIA</span>
+                    </a>
+                    
+                    <a href="SEU_LINK_AQUI" target="_blank" class="btn-link">
+                        <div class="btn-icon-wrapper">
+                            <img src="botao-lista.png" alt="Lista">
+                        </div>
+                        <span class="btn-text">LISTA DE<br>PRESENTES</span>
+                    </a>
                 </div>
-                <span class="btn-text">LISTA DE<br>PRESENTES</span>
-            </a>
+            </div> <!-- Fim da Página Central -->
+
+            <!-- PÁGINA DA DIREITA (Slide 3) -->
+            <div class="slide slide-right">
+                <img src="tela_direita.png" alt="Tela Direita" class="bg-slide">
+            </div>
+
+        </div> <!-- Fim do Slider Container -->
+
+        <!-- CAPA FECHADA (Frente) -->
+        <div class="cover-wrapper" id="coverWrapper">
+            <div class="door door-left">
+                <img src="capa-esquerda.png" alt="Capa Esquerda">
+            </div>
+            
+            <div class="door door-right">
+                <img src="capa-direita.png" alt="Capa Direita">
+            </div>
+
+            <!-- Selo Clicável -->
+            <div class="seal-container" id="sealBtn">
+                <img src="selo.png" alt="Selo de Cera" class="seal-img">
+            </div>
         </div>
-    </div>
-    
-    <!-- PÁGINA DA DIREITA (Slide 3) -->
-    <div class="slide slide-right">
-        <!-- Aqui você vai colocar a imagem de fundo ou textos da pág 3 -->
-        <h1 style="color: #1a3629;">Página da Direita</h1>
-    </div>
 
-</div>
-
-<!-- CAPA FECHADA (Frente) -->
-<div class="cover-wrapper" id="coverWrapper">
-    <div class="door door-left">
-        <!-- Removido o 'images/' -->
-        <img src="capa-esquerda.png" alt="Capa Esquerda">
-    </div>
-    
-    <div class="door door-right">
-        <!-- Removido o 'images/' -->
-        <img src="capa-direita.png" alt="Capa Direita">
-    </div>
-
-    <!-- Selo Clicável -->
-    <div class="seal-container" id="sealBtn">
-        <!-- Removido o 'images/' -->
-        <img src="selo.png" alt="Selo de Cera" class="seal-img">
-    </div>
-</div>
+    </div> <!-- Fim do Container -->
 
     <script src="script.js"></script>
 </body>
