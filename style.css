@@ -1,0 +1,200 @@
+@font-face {
+    font-family: 'FonteDoCasamento'; /* Fonte Pompiere-Regular */
+    src: url('Pompiere-Regular.ttf') format('truetype'); 
+}
+
+/* Configurações Básicas */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Impede rolagem enquanto fechado */
+    font-family: sans-serif;
+    background-color: #fcfaf7; /* Cor de fundo suave */
+}
+
+/* Container Principal */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- ESTILO DO CONVITE ABERTO --- */
+.invitation-open {
+    position: absolute;
+    width: 100%;
+    max-width: 500px; /* Largura máxima do convite */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Fica atrás */
+}
+
+.bg-open {
+    width: 100%;
+    height: auto;
+    max-height: 90vh; /* Ajusta à altura da tela */
+    object-fit: contain;
+}
+
+/* --- Botões Interativos --- */
+.buttons-container {
+    position: absolute;
+    top: 57%; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os dois botões */
+    z-index: 5;
+}
+
+.btn-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Este é o círculo verde */
+.btn-icon-wrapper {
+    width: 45px; /* Tamanho final do botão (bem menor) */
+    height: 45px;
+    background-color: #1a3629; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Este é o ícone branco dentro do círculo */
+.btn-icon-wrapper img {
+    width: 45px; /* Ícone interno menor */
+    height: 45px;
+}
+
+.btn-text {
+    font-family: 'FonteDoCasamento', sans-serif; /* <-- Adicione esta linha aqui */
+    color: #1a3629;
+    font-size: 8px; /* Texto pequeno e discreto */
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+/* Corta a imagem combinada para mostrar o botão esquerdo */
+.btn-img.left {
+    object-fit: cover;
+    object-position: left; 
+    width: 110px;
+}
+
+/* Corta a imagem combinada para mostrar o botão direito */
+.btn-img.right {
+    object-fit: cover;
+    object-position: right;
+    width: 110px;
+}
+
+.btn-link:hover .btn-img {
+    transform: scale(1.05); /* Efeito de hover */
+}
+
+
+/* --- ESTILO DA CAPA E ANIMAÇÃO --- */
+.cover-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10; /* Fica na frente */
+    display: flex;
+    overflow: hidden;
+}
+
+/* As duas portas da capa */
+.door {
+    position: absolute;
+    top: 0;
+    width: 50vw; /* Cada lado ocupa exatamente metade da largura da tela */
+    height: 100vh;
+    overflow: hidden;
+    transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.door-left {
+    left: 0;
+}
+
+.door-right {
+    right: 0;
+}
+
+/* Ajuste da imagem dentro de cada porta */
+.door img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+}
+
+/* Mantém o corte central perfeitamente unido */
+.door-left img {
+    object-position: right center; /* Mantém a borda interna colada ao centro */
+}
+
+.door-right img {
+    object-position: left center; /* Mantém a borda interna colada ao centro */
+}
+
+/* O Selo */
+.seal-container {
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    text-align: center;
+    cursor: pointer;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.seal-img {
+    width: 100px; /* Tamanho do selo */
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+}
+
+.seal-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    background: rgba(255,255,255,0.7);
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+/* --- CLASSE QUE ATIVA A ABERTURA --- */
+.cover-wrapper.open .door-left {
+    transform: translateX(-100%); /* Move para a esquerda */
+}
+
+.cover-wrapper.open .door-right {
+    transform: translateX(100%); /* Move para a direita */
+}
+
+.cover-wrapper.open .seal-container {
+    opacity: 0;
+    visibility: hidden; /* Esconde o selo */
+}
+
+/* Permite interagir com o convite após aberto */
+.cover-wrapper.open {
+    pointer-events: none; 
+}
