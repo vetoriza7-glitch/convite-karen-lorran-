@@ -235,7 +235,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
+    font-size: 9px;
     z-index: 10;
     cursor: pointer;
     animation: pulse-arrow 2s infinite; /* Chama a animação */
