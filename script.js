@@ -1,14 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
     const sealBtn = document.getElementById('sealBtn');
     const coverWrapper = document.getElementById('coverWrapper');
+    const somAbertura = document.getElementById('somAbertura');
+    const sliderContainer = document.getElementById('sliderContainer');
 
+    // MÁGICA: Assim que carregar, empurra a tela para o Slide 2 (Centro) silenciosamente
+    setTimeout(() => {
+        if(sliderContainer) {
+            sliderContainer.scrollLeft = window.innerWidth;
+        }
+    }, 100);
+
+    // Quando clica no selo
     sealBtn.addEventListener('click', () => {
-        // Adiciona a classe 'open' que engatilha a animação CSS
         coverWrapper.classList.add('open');
         
-        // Permite rolagem da página após a abertura (caso o convite seja longo)
+        if (somAbertura) {
+            somAbertura.play();
+        }
+
         setTimeout(() => {
-            document.body.style.overflow = 'auto';
-        }, 1500); // Espera a animação acabar
+            document.body.style.overflow = 'auto'; // Libera o uso geral
+        }, 1200);
     });
 });
