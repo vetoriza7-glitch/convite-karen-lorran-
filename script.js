@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(sliderContainer) {
             sliderContainer.scrollLeft = window.innerWidth;
         }
-    }, 100);
+    }, 300);
 
     // Quando clica no selo
     sealBtn.addEventListener('click', () => {
