@@ -55,10 +55,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-    
-    /* Cor de fundo provisória só para você ver a diferença */
-    background-color: #fcfaf7; 
+    background-color: #fcfaf7; /* A cor foi colocada corretamente aqui dentro! */
 }
 
 /* Imagem de fundo do slide central */
@@ -93,7 +90,7 @@ body, html {
 
 /* Este é o círculo verde */
 .btn-icon-wrapper {
-    width: 45px; /* Tamanho final do botão (bem menor) */
+    width: 45px; /* Tamanho final do botão */
     height: 45px;
     background-color: #1a3629; 
     border-radius: 50%;
@@ -104,12 +101,12 @@ body, html {
 
 /* Este é o ícone branco dentro do círculo */
 .btn-icon-wrapper img {
-    width: 45px; /* Ícone interno menor */
-    height: 45px;
+    width: 25px; /* Diminuí para a imagem não engolir o círculo verde */
+    height: 25px;
 }
 
 .btn-text {
-    font-family: 'FonteDoCasamento', sans-serif; /* <-- Adicione esta linha aqui */
+    font-family: 'FonteDoCasamento', sans-serif; 
     color: #1a3629;
     font-size: 8px; /* Texto pequeno e discreto */
     font-weight: bold;
@@ -117,24 +114,10 @@ body, html {
     text-transform: uppercase;
     line-height: 1.2;
 }
-/* Corta a imagem combinada para mostrar o botão esquerdo */
-.btn-img.left {
-    object-fit: cover;
-    object-position: left; 
-    width: 110px;
-}
 
-/* Corta a imagem combinada para mostrar o botão direito */
-.btn-img.right {
-    object-fit: cover;
-    object-position: right;
-    width: 110px;
+.btn-link:hover .btn-icon-wrapper {
+    transform: scale(1.05); /* Efeito de hover arrumado para a nova estrutura */
 }
-
-.btn-link:hover .btn-img {
-    transform: scale(1.05); /* Efeito de hover */
-}
-
 
 /* --- ESTILO DA CAPA E ANIMAÇÃO --- */
 .cover-wrapper {
