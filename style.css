@@ -24,23 +24,51 @@ body, html {
     align-items: center;
 }
 
-/* --- ESTILO DO CONVITE ABERTO --- */
-.invitation-open {
+/* --- SLIDER (CARROSSEL DE PÁGINAS) --- */
+.slider-container {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 500px; /* Largura máxima do convite */
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1; /* Fica atrás */
+    display: flex; /* Coloca as 3 páginas lado a lado */
+    overflow-x: auto; /* Permite rolar para os lados */
+    scroll-snap-type: x mandatory; /* Cria o efeito de "encaixe" magnético */
+    scroll-behavior: smooth; /* Rolagem suave */
+    -webkit-overflow-scrolling: touch; /* Deixa perfeito no iPhone */
+    z-index: 1;
+    
+    /* Esconde a barrinha de rolagem feia do navegador */
+    scrollbar-width: none; 
+}
+.slider-container::-webkit-scrollbar {
+    display: none;
 }
 
+/* --- CONFIGURAÇÃO DE CADA PÁGINA (SLIDE) --- */
+.slide {
+    min-width: 100vw; /* Cada página ocupa 100% da largura da tela */
+    height: 100vh;
+    scroll-snap-align: center; /* Encaixa sempre no centro da tela */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    /* Cor de fundo provisória só para você ver a diferença */
+    background-color: #fcfaf7; 
+}
+
+/* Imagem de fundo do slide central */
 .bg-open {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    max-height: 90vh; /* Ajusta à altura da tela */
-    object-fit: contain;
+    height: 100%;
+    object-fit: contain; /* Ou 'cover', dependendo da sua imagem */
+    z-index: 0;
 }
 
 /* --- Botões Interativos --- */
