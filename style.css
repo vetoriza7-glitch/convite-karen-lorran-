@@ -227,8 +227,8 @@ body, html {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 16px;
-    height: 16px;
+    width: 19px;
+    height: 19px;
     background-color: rgba(26, 54, 41, 0.6); /* Verde escuro translúcido */
     color: #fcfaf7; /* Cor do fundo do site */
     border-radius: 50%;
