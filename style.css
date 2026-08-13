@@ -97,6 +97,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: pulse-button 2s infinite;
 }
 
 /* Este é o ícone branco dentro do círculo */
@@ -250,4 +251,20 @@ body, html {
     0% { transform: translateY(-50%) scale(1); opacity: 0.6; }
     50% { transform: translateY(-50%) scale(1.1); opacity: 1; }
     100% { transform: translateY(-50%) scale(1); opacity: 0.6; }
+}
+
+/* --- ANIMAÇÃO DE PULSAR DOS BOTÕES --- */
+@keyframes pulse-button {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(26, 54, 41, 0.6); /* Sombra inicial verde */
+    }
+    70% {
+        transform: scale(1.05); /* Aumenta o botão levemente */
+        box-shadow: 0 0 0 10px rgba(26, 54, 41, 0); /* A sombra expande e desaparece */
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(26, 54, 41, 0);
+    }
 }
